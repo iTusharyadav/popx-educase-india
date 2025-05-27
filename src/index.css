@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: #F7F8F9;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#6C25FF] text-white font-medium text-base px-4 py-3 rounded-md w-full transition-all duration-200 hover:bg-[#5a1fe6] focus:outline-none focus:ring-2 focus:ring-[#6C25FF] focus:ring-opacity-50;
+  }
+  
+  .btn-secondary {
+    @apply bg-[#6C25FF4B] text-[#1D2226] font-medium text-base px-4 py-3 rounded-md w-full transition-all duration-200 hover:bg-[#6C25FF38] focus:outline-none focus:ring-2 focus:ring-[#6C25FF] focus:ring-opacity-50;
+  }
+
+  .input-field {
+    @apply w-full p-3 border rounded-md border-[#CBCBCB] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#6C25FF] focus:ring-opacity-50 focus:border-[#6C25FF] placeholder-[#919191];
+  }
+
+  .input-field-error {
+    @apply border-[#DD4A3D] focus:ring-[#DD4A3D] focus:border-[#DD4A3D];
+  }
+
+  .radio-button {
+    @apply w-4 h-4 text-[#642AF5] border-[#CBCBCB] focus:ring-2 focus:ring-[#642AF5] focus:ring-opacity-50 transition-all duration-200;
+  }
+
+  .form-label {
+    @apply block text-sm text-[#1D2226] mb-1.5 font-medium;
+  }
+
+  .error-text {
+    @apply text-[#DD4A3D] text-sm mt-1;
+  }
+}
+
+/* Smooth transitions */
+* {
+  @apply transition-colors duration-200;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBCBCB;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
